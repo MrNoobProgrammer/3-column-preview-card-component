@@ -1,0 +1,125 @@
+:root {
+  /* color variables */
+  --color-orange-bright: hsl(31, 77%, 52%);
+  --color-cyan-dark: hsl(184, 100%, 22%);
+  --color-cyan-very-dark: hsl(179, 100%, 13%);
+  --color-white-trans: hsla(0, 0%, 100%, 0.75);
+  --color-gray-very-light: hsl(0, 0%, 95%);
+
+  /* font variables */
+  --font-ld: "Lexend Deca", sans-serif;
+  --font-bsd: "Big Shoulders Display", cursive;
+}
+
+/* general styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-gray-very-light);
+}
+
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container-main {
+  width: 67.5rem;
+  margin: 25rem auto;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.card-1 {
+  background-color: var(--color-orange-bright);
+  color: var(--color-orange-bright);
+}
+
+.card-2 {
+  background-color: var(--color-cyan-dark);
+  color: var(--color-cyan-dark);
+}
+
+.card-3 {
+  background-color: var(--color-cyan-very-dark);
+  color: var(--color-cyan-very-dark);
+}
+
+.container-card {
+  padding: 3.2rem;
+}
+
+.icon-car,
+.title-car {
+  padding-bottom: 2.8rem;
+}
+
+.icon-car {
+  width: 4.2rem;
+  height: auto;
+}
+
+.title-car {
+  font-family: var(--font-bsd);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-gray-very-light);
+  text-transform: uppercase;
+}
+
+.description-car {
+  padding-bottom: 5.6rem;
+  font-family: var(--font-ld);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-white-trans);
+  line-height: 18px;
+}
+
+.btn {
+  background-color: var(--color-gray-very-light);
+  color: inherit;
+  padding: 0.8rem 1.6rem;
+  border: 0.2rem solid var(--color-gray-very-light);
+  border-radius: 2rem;
+  font-family: var(--font-ld);
+  font-size: 1.2rem;
+  transition: all;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--color-gray-very-light);
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .container-main {
+    width: 25rem;
+    margin: 4.2rem auto;
+  }
+
+  .grid-3-cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .icon-car,
+  .title-car {
+    padding-bottom: 2.2rem;
+  }
+
+  .description-car {
+    padding-bottom: 1.8rem;
+  }
+}
